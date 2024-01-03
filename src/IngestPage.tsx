@@ -27,7 +27,18 @@ export default function IngestPage({ }: IngestPage) {
     <div className="flex items-center flex-col">
 
       <div className='flex flex-wrap justify-center'>
-        <YtDlp />
+        <DownloadCard
+          title="YouTube Downloader"
+          desc="saves video, transcript, and comments"
+          label="Video ID"
+          placeholder="OpyIY7ixgI8"
+        />
+        <DownloadCard
+          title="Twitter"
+          desc="only saves video"
+          label="Twitter Link"
+          placeholder="https://x.com/Rubber0Cement/status/1742024413917446225"
+        />
       </div>
 
     </div>
@@ -35,19 +46,25 @@ export default function IngestPage({ }: IngestPage) {
 }
 
 
-export function YtDlp() {
+export function DownloadCard({
+  title,
+  desc,
+  label,
+  placeholder
+  // api
+}: DownloadCard) {
   return (
     <Card className="w-[350px] m-2">
       <CardHeader>
-        <CardTitle>YouTube Downloader</CardTitle>
-        <CardDescription>yt-dlp downloads video, transcript, and comments.</CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{desc}</CardDescription>
       </CardHeader>
       <CardContent>
         <form>
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Video ID</Label>
-              <Input id="name" placeholder="OpyIY7ixgI8" />
+              <Label htmlFor="name">{label}</Label>
+              <Input id="name" placeholder={placeholder} />
             </div>
           </div>
         </form>
@@ -58,4 +75,12 @@ export function YtDlp() {
       </CardFooter>
     </Card>
   )
+}
+
+type DownloadCard = {
+  title: string,
+  desc: string,
+  label: string,
+  placeholder: string
+  // api
 }
