@@ -1,12 +1,17 @@
-# base-vite-react
+# mf-ui
+
+React frontend for mf-catalog (media file catalog)
+
+Forked from player-react which was originally forked from vite-base-react.
 
 ## Steps
 
 ```bash
-git clone https://github.com/ariym/base-vite-react project-name
-cd project-name
-git remote remove origin
-npm i
+npm run setup
+
+vi .env
+
+npm start
 ```
 
 ## Features
