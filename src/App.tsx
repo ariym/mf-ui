@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import TablesPage from './TablesPage'
-import IngestPage from './IngestPage'
-import ProcessPage from './ProcessPage'
-import QueuePage from './QueuePage'
+import IngestPage from './FilesPage'
+import ProcessPage from './TagsPage'
+import QueuePage from './JobsPage'
 import Header from './_components/Header'
 
 /*
@@ -39,15 +39,15 @@ export default function App() {
         />
 
         <Route
-          path="/ingest"
+          path="/files"
           element={<IngestPage />}
         />
         <Route
-          path="/process"
+          path="/tags"
           element={<ProcessPage />}
         />
         <Route
-          path="/queue"
+          path="/jobs"
           element={<QueuePage />}
         />
 
