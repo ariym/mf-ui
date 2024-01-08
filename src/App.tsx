@@ -51,6 +51,7 @@ export default function App() {
           element={<QueuePage />}
         />
 
+        <Route path="*" element={<p className="text-center text-4xl font-thin">Error 404. URL does not exist.</p>} />
 
       </Routes>
 
