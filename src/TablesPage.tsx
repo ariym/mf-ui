@@ -15,10 +15,10 @@ import {
 
 import { Checkbox } from "@/_components/ui/checkbox"
 
-type IngestPage = {
+type TablePage = {
 }
 
-export default function IngestPage({ }: IngestPage) {
+export default function TablePage({ }: TablePage) {
 
   const [dirTree, udpateDirTree]: [any, any] = useState([]);
 
