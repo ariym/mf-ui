@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
+import { fetchQueue } from './_api'
 
 // components
 import { Input } from "@/_components/ui/input"
@@ -24,10 +25,7 @@ import {
   TableRow,
 } from "@/_components/ui/table"
 
-import { fetchQueue } from './_api'
-
-
-import { Checkbox } from "@/_components/ui/checkbox"
+import { Progress } from "@/_components/ui/progress"
 
 type QueuePage = {
 }
@@ -61,7 +59,8 @@ export default function JobsPage({ }: QueuePage) {
               <TableHead className="w-[100px]">Status</TableHead>
               <TableHead>Name</TableHead>
               <TableHead>File</TableHead>
-              <TableHead className="text-right">Program</TableHead>
+              <TableHead>Program</TableHead>
+              <TableHead className="text-right">Progress</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -71,7 +70,8 @@ export default function JobsPage({ }: QueuePage) {
                   <TableCell className="font-medium">{status}</TableCell>
                   <TableCell>{name}</TableCell>
                   <TableCell>{fileId}</TableCell>
-                  <TableCell className="text-right">{program}</TableCell>
+                  <TableCell>{program}</TableCell>
+                  <TableCell className="text-right"><Progress value={100} /></TableCell>
                 </TableRow>
               )) : null
             }
