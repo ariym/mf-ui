@@ -1,12 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
 
+import Header from './_components/Header'
 import TablesPage from './TablesPage'
 import IngestPage from './FilesPage'
 import ProcessPage from './TagsPage'
 import QueuePage from './JobsPage'
-import Header from './_components/Header'
+
+const queryClient = new QueryClient()
 
 /*
+
+App.tsx is a wrapper for react-router and tanstack/react-query
+
 PAGES
 
 Universal modal - job queue
@@ -29,8 +35,9 @@ export default function App() {
   return (
     <BrowserRouter basename="/">
 
-      <Header />
+      <QueryClientProvider client={queryClient}>
 
+      <Header />
       <Routes>
 
         <Route
@@ -51,9 +58,11 @@ export default function App() {
           element={<QueuePage />}
         />
 
-        <Route path="*" element={<p className="text-center text-4xl font-thin">Error 404. URL does not exist.</p>} />
+        <Route path="*" element={<p className="text-center text-4xl ">Error 404. URL does not exist.</p>} />
 
       </Routes>
+
+      </QueryClientProvider>
 
     </BrowserRouter>
   );
