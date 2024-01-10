@@ -13,7 +13,7 @@ const LINKS = [
     notifications: 0
   },
   {
-    title: "🧮 programs",
+    title: "🧮 program",
     link: "jobs",
     notifications: 3
   },
