@@ -22,7 +22,7 @@ const LINKS = [
 export default function Header() {
 
   return (
-    <header className=" py-5 px-5 max-w-screen-4xl flex justify-between items-center border-b border-silver">
+    <header className="py-5 px-5 max-w-screen-4xl flex justify-between items-center border-b border-silver">
       <span className="text-4xl font-normal">
         <a href="https://github.com/ariym/mf-catalog" target="_blank">
           {/* mf-catalog */}

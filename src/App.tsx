@@ -5,7 +5,8 @@ import Header from './_components/Header'
 import TablesPage from './TablesPage'
 import IngestPage from './FilesPage'
 import ProcessPage from './TagsPage'
-import QueuePage from './JobsPage'
+import JobsPage from './JobsPage'
+import Error404Page from './Error404Page'
 
 const queryClient = new QueryClient()
 
@@ -55,10 +56,10 @@ export default function App() {
         />
         <Route
           path="/jobs"
-          element={<QueuePage />}
+          element={<JobsPage />}
         />
 
-        <Route path="*" element={<p className="text-center text-4xl ">Error 404. URL does not exist.</p>} />
+        <Route path="*" element={<Error404Page />} />
 
       </Routes>
 
