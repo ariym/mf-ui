@@ -23,11 +23,27 @@ export default function ProcessPage({ }: ProcessPage) {
   const [dirTree, udpateDirTree]: [any, any] = useState([]);
 
   return (
-    <div className="flex items-center flex-col">
+    <div className="flex items-center">
 
 
-      <div className='flex flex-wrap justify-center'>
-      </div>
+
+
+        <p>we are just going to use this to develop a video player real quick by listing out all it's unique ui components and their functions</p>
+
+
+<div>
+
+        <Button>play/pause</Button>
+
+        <p>session</p>
+        <Button>forward</Button>
+        <Button>backward</Button>
+
+
+        <p>Next/Previous</p>
+
+</div>
+
 
     </div>
   )

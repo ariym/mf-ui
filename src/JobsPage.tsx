@@ -42,9 +42,9 @@ export default function JobsPage({ }: QueuePage) {
     console.log("this is the data returned", data)
   }, [data])
 
-  if (isPending) return 'Loading...'
+  if (isPending) return <p>Loading...</p>
 
-  if (error) return 'An error has occurred: ' + error.message
+  if (error) return <p>An error has occurred:  {error.message}</p>
 
 
   return (

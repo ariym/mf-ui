@@ -117,7 +117,7 @@ export function TabsDemo() {
 
 
 const UniSidebar = () => (
-  <Sidebar>
+  <Sidebar className='h-screen'>
     <Menu>
       <SubMenu label="Charts">
         <MenuItem> Pie charts </MenuItem>
